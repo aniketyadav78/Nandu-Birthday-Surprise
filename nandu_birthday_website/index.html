@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For Nandu 💗 | Birthday Surprise</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="hearts" id="hearts"></div>
+
+  <main class="app">
+    <!-- STEP 1 -->
+    <section class="screen active" id="screen-name">
+      <div class="glass-card intro-card">
+        <div class="mini-label">A tiny surprise for someone special ✨</div>
+        <div class="emoji-orbit">💗</div>
+        <h1>Enter your name</h1>
+        <p class="subtitle">Pehle ye chhota sa puzzle solve karo, Nandu... 👀</p>
+
+        <div class="puzzle-box">
+          <p class="puzzle-title">Make the correct name</p>
+          <div class="answer" id="answer"></div>
+          <div class="tiles" id="tiles"></div>
+          <div class="puzzle-actions">
+            <button class="secondary-btn" id="resetPuzzle">↻ Reset</button>
+            <button class="primary-btn" id="checkName">Check 💕</button>
+          </div>
+          <p class="error" id="nameError"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- STEP 2 -->
+    <section class="screen" id="screen-song">
+      <div class="glass-card">
+        <div class="step">STEP 02 • YOUR SONG 🎵</div>
+        <h2>Okay Nandu... now choose your vibe 💗</h2>
+        <p class="subtitle">Jo song tum select karogi, wahi is surprise ke next part mein chalega.</p>
+
+        <div class="song-grid">
+          <button class="song-card" data-song="1">
+            <span class="song-icon">🎧</span>
+            <span><b>Song One</b><small>Tap to choose</small></span>
+            <span class="play-dot">▶</span>
+          </button>
+          <button class="song-card" data-song="2">
+            <span class="song-icon">🎶</span>
+            <span><b>Song Two</b><small>Tap to choose</small></span>
+            <span class="play-dot">▶</span>
+          </button>
+          <button class="song-card" data-song="3">
+            <span class="song-icon">💿</span>
+            <span><b>Song Three</b><small>Tap to choose</small></span>
+            <span class="play-dot">▶</span>
+          </button>
+          <button class="song-card" data-song="4">
+            <span class="song-icon">🎼</span>
+            <span><b>Song Four</b><small>Tap to choose</small></span>
+            <span class="play-dot">▶</span>
+          </button>
+        </div>
+
+        <div class="selected-song" id="selectedSong">Choose one song to continue...</div>
+        <audio id="player" controls preload="metadata"></audio>
+      </div>
+    </section>
+
+    <!-- STEP 3 -->
+    <section class="screen" id="screen-special">
+      <div class="glass-card question-card">
+        <div class="big-question">👀</div>
+        <div class="step">ONE LAST THING</div>
+        <h2>Aaj toh kuch special hai...</h2>
+        <p class="subtitle">But what could it possibly be? 🤔</p>
+        <button class="primary-btn big-btn" id="specialBtn">What is so special? ✨</button>
+      </div>
+    </section>
+
+    <!-- STEP 4 -->
+    <section class="screen" id="screen-date">
+      <div class="glass-card question-card">
+        <div class="calendar">📅</div>
+        <div class="step">THINK THINK...</div>
+        <h2>Waise aaj तारीख kya hai?</h2>
+        <p class="subtitle">Hint: Today is <b>5 October</b> 😉</p>
+        <input id="dateInput" class="date-input" type="text" placeholder="Type the date..." autocomplete="off" />
+        <button class="primary-btn big-btn" id="checkDate">Submit 💭</button>
+        <p class="error" id="dateError"></p>
+      </div>
+    </section>
+
+    <!-- STEP 5 -->
+    <section class="screen final-screen" id="screen-final">
+      <div class="confetti" id="confetti"></div>
+
+      <div class="glass-card birthday-card">
+        <div class="photo-frame">
+          <img id="finalPhoto" src="assets/photos/photo1.jpeg" alt="Nandu">
+          <div class="photo-badge">✨ Nandu ✨</div>
+        </div>
+
+        <div class="step">5 OCTOBER • YOUR DAY 💗</div>
+        <h1 class="birthday-title">Happy Birthday,<br><span>Nandu! 🎂</span></h1>
+
+        <div class="message">
+          <p>
+            Happy Birthday meri Nandu! 💗
+          </p>
+          <p>
+            Main tere saath <b>6th class se</b> hoon, aur itne saalon baad bhi
+            tu meri <b>bestest friend</b>, meri <b>param mitra</b> hai.
+          </p>
+          <p>
+            Bachpan se lekar aaj tak hum saath rahe hain, aur bas aise hi
+            hamesha saath rahenge. 🫶
+          </p>
+          <p>
+            Na main tujhe chhodungi, na tujhe mujhe chhodne dungi. 😂❤️
+            Life mein kitne bhi changes aayein, hamari dosti nahi badlegi.
+          </p>
+          <p class="last-line">
+            Tu meri life ke un logon mein se hai jise main kabhi lose nahi karna chahti. 🌷
+          </p>
+        </div>
+
+        <div class="photo-strip">
+          <img src="assets/photos/photo1.jpeg" alt="Memory 1">
+          <img src="assets/photos/photo2.jpeg" alt="Memory 2">
+          <img src="assets/photos/photo3.jpeg" alt="Memory 3">
+          <img src="assets/photos/photo4.jpeg" alt="Memory 4">
+        </div>
+
+        <div class="signature">Always your param mitra 💕</div>
+        <button class="secondary-btn replay-btn" id="replay">↻ Relive the surprise</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
